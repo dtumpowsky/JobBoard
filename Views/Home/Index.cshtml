@@ -1,10 +1,10 @@
-<h1>Car Dealership</h1>
+<h1>Job Board:</h1>
 <ul>
   @{var jobNumber = 0;}
   @foreach(var job in Model)
   {
   jobNumber++;
-  <li>Entered Job Posting @carNumber<br>
+  <li>Entered Job Posting @jobNumber<br>
   @job.GetJobTitle()<br>
   @job.GetDescription()<br>
   @job.GetSalary()<br>

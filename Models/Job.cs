@@ -7,15 +7,16 @@ namespace JobBoard.Models
         {
         private string _jobTitle;
         private string _description;
-        private int _salary;
-        private string _contatctPerson;
+        //long is a different kind of int
+        private long _salary;
+        private string _contactPerson;
         private static List<JobOpening> _instances = new List<JobOpening> {};
 
-        public JobOpening (string JobTitle, int Description, int Salary, string ContatctPerson)
+        public JobOpening (string JobTitle, string Description, long Salary, string ContactPerson)
         {
             _jobTitle = JobTitle;
             _description = Description;
-            _salary = salary;
+            _salary = Salary;
             _contactPerson = ContactPerson;
         }
 
@@ -23,16 +24,16 @@ namespace JobBoard.Models
         {
             _jobTitle = newJob;
         }
-        public string GetJob()
+        public string GetJobTitle()
         {
-            return jobTitle;
+            return _jobTitle;
         }
 
-        public void SetDescription(int newDescription)
+        public void SetDescription(string newDescription)
         {
             _description = newDescription;
         }
-        public int GetDescription()
+        public string GetDescription()
         {
             return _description;
         }
@@ -40,7 +41,7 @@ namespace JobBoard.Models
         {
             _salary = newSalary;
         }
-        public int GetSalary()
+        public long GetSalary()
         {
             return _salary;
         }
@@ -53,7 +54,7 @@ namespace JobBoard.Models
             return _contactPerson;
         }
 
-        public static List<Car> GetAll()
+        public static List<JobOpening> GetAll()
         {
         return _instances;
         }

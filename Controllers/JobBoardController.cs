@@ -1,15 +1,16 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using CarDealership.Models;
+using JobBoard.Models;
+using System;
 
 namespace JobBoard.Controllers
 {
-    public class CarsController : Controller
+    public class HomeController : Controller
     {
         [HttpGet("/jobs")]
         public ActionResult Index()
         {
-            List<Car> allJobs = Car.GetAll();
+            List<JobOpening> allJobs = JobOpening.GetAll();
             return View(allJobs);
         }
 
@@ -22,18 +23,11 @@ namespace JobBoard.Controllers
         [HttpPost("/jobs")]
         public ActionResult Create()
         {
-          Car newCar = new Car(Request.Form["new-model"], int.Parse(Request.Form["new-mile"]), int.Parse(Request.Form["new-price"]), Request.Form["new-color"]);
-          newCar.Save();
+          JobOpening newJob = new JobOpening(Request.Form["new-job-opening"], Request.Form["new-description"], Int64.Parse(Request.Form["new-salary"]), Request.Form["new-contact-person"]);
+          newJob.Save();
 
-          List<Car> allJobs = Car.GetAll();
+          List<JobOpening> allJobs = JobOpening.GetAll();
           return View("Index", allJobs);
-        }
-
-        [HttpPost("/jobs/delete")]
-        public ActionResult DeleteAll()
-        {
-            Car.ClearAll();
-            return View();
         }
     }
 }
