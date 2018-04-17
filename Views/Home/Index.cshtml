@@ -1,0 +1,14 @@
+<h1>Car Dealership</h1>
+<ul>
+  @{var jobNumber = 0;}
+  @foreach(var job in Model)
+  {
+  jobNumber++;
+  <li>Entered Job Posting @carNumber<br>
+  @job.GetJobTitle()<br>
+  @job.GetDescription()<br>
+  @job.GetSalary()<br>
+  @job.GetContactPerson()</li>
+  }
+</ul>
+<p><a href="/jobs/new">Add another job.</a></p>
