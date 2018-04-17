@@ -23,7 +23,9 @@ namespace JobBoard.Controllers
         [HttpPost("/jobs")]
         public ActionResult Create()
         {
-          JobOpening newJob = new JobOpening(Request.Form["new-job-opening"], Request.Form["new-description"], Int64.Parse(Request.Form["new-salary"]), Request.Form["new-contact-person"]);
+          Contact newContact = new Contact(Request.Form["new-job-name"], Request.Form["new-contact-number"], Request.Form["new-contact-email"]);
+
+          JobOpening newJob = new JobOpening(Request.Form["new-job-opening"], Request.Form["new-description"], Int64.Parse(Request.Form["new-salary"]), newContact);
           newJob.Save();
 
           List<JobOpening> allJobs = JobOpening.GetAll();

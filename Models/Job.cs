@@ -4,20 +4,20 @@ using System;
 namespace JobBoard.Models
 {
     public class JobOpening
-        {
+    {
         private string _jobTitle;
         private string _description;
         //long is a different kind of int
         private long _salary;
-        private string _contactPerson;
+        private Contact _contact;
         private static List<JobOpening> _instances = new List<JobOpening> {};
 
-        public JobOpening (string JobTitle, string Description, long Salary, string ContactPerson)
+        public JobOpening(string JobTitle, string Description, long Salary, Contact contact)
         {
             _jobTitle = JobTitle;
             _description = Description;
             _salary = Salary;
-            _contactPerson = ContactPerson;
+            _contact = contact;
         }
 
         public void SetJob(string newJob)
@@ -45,14 +45,12 @@ namespace JobBoard.Models
         {
             return _salary;
         }
-        public void SetContactPerson(string newContactPerson)
-        {
-            _contactPerson = newContactPerson;
-        }
-        public string GetContactPerson()
-        {
-            return _contactPerson;
-        }
+
+        // public string GetContact()
+        // {
+        //     return Contact;
+        // }
+
 
         public static List<JobOpening> GetAll()
         {
