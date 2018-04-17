@@ -1,14 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Board</title>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+</head>
+<div class= 'container'>
+<div class= 'jumbotron'>
+<body>
 <h1>Job Board:</h1>
+</div>
 <ul>
   @{var jobNumber = 0;}
   @foreach(var job in Model)
   {
   jobNumber++;
-  <li>Entered Job Posting @jobNumber<br>
+  <br>
+  <li><strong>Job Posting #@jobNumber</strong><br>
   @job.GetJobTitle()<br>
   @job.GetDescription()<br>
   @job.GetSalary()<br>
-  @job.GetContactPerson()</li>
+  @job.GetContactPerson()<br></li>
   }
 </ul>
 <p><a href="/jobs/new">Add another job.</a></p>
+</body>
+</div>
+</html>

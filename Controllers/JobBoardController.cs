@@ -7,7 +7,7 @@ namespace JobBoard.Controllers
 {
     public class HomeController : Controller
     {
-        [HttpGet("/jobs")]
+        [HttpGet("/")]
         public ActionResult Index()
         {
             List<JobOpening> allJobs = JobOpening.GetAll();
