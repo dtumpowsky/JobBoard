@@ -46,10 +46,10 @@ namespace JobBoard.Models
             return _salary;
         }
 
-        // public string GetContact()
-        // {
-        //     return Contact;
-        // }
+        public Contact GetContact()
+        {
+            return _contact;
+        }
 
 
         public static List<JobOpening> GetAll()

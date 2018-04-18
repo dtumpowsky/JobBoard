@@ -12,7 +12,6 @@
 <ul>
   @{var jobNumber = 0;}
   @foreach(var job in Model)
-  @foreach(var contact in Model)
   {
   jobNumber++;
   <br>
@@ -20,7 +19,7 @@
   @job.GetJobTitle()<br>
   @job.GetDescription()<br>
   @job.GetSalary()<br>
-  @job.Contact<br>
+  @job.GetContact()<br>
   </li>
   }
 </ul>

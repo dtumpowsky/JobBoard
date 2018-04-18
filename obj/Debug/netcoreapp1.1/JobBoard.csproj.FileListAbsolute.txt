@@ -6,3 +6,12 @@
 /Users/Guest/Desktop/JobBoard/bin/Debug/netcoreapp1.1/JobBoard.pdb
 /Users/Guest/Desktop/JobBoard/obj/Debug/netcoreapp1.1/JobBoard.dll
 /Users/Guest/Desktop/JobBoard/obj/Debug/netcoreapp1.1/JobBoard.pdb
+/Users/dtumpowsky/Desktop/code/C#/JobBoard/bin/Debug/netcoreapp1.1/JobBoard.deps.json
+/Users/dtumpowsky/Desktop/code/C#/JobBoard/bin/Debug/netcoreapp1.1/JobBoard.runtimeconfig.json
+/Users/dtumpowsky/Desktop/code/C#/JobBoard/bin/Debug/netcoreapp1.1/JobBoard.runtimeconfig.dev.json
+/Users/dtumpowsky/Desktop/code/C#/JobBoard/obj/Debug/netcoreapp1.1/JobBoard.csproj.CoreCompileInputs.cache
+/Users/dtumpowsky/Desktop/code/C#/JobBoard/obj/Debug/netcoreapp1.1/JobBoard.AssemblyInfo.cs
+/Users/dtumpowsky/Desktop/code/C#/JobBoard/obj/Debug/netcoreapp1.1/JobBoard.dll
+/Users/dtumpowsky/Desktop/code/C#/JobBoard/obj/Debug/netcoreapp1.1/JobBoard.pdb
+/Users/dtumpowsky/Desktop/code/C#/JobBoard/bin/Debug/netcoreapp1.1/JobBoard.dll
+/Users/dtumpowsky/Desktop/code/C#/JobBoard/bin/Debug/netcoreapp1.1/JobBoard.pdb
