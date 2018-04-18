@@ -43,5 +43,9 @@ namespace JobBoard.Models
         {
             return _email;
         }
+        public string GetContactInfo()
+        {
+            return _name + ", " + _phoneNumber + ", " + _email;
+        }
     }
 }

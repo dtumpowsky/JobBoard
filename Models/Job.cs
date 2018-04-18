@@ -51,7 +51,6 @@ namespace JobBoard.Models
             return _contact;
         }
 
-
         public static List<JobOpening> GetAll()
         {
         return _instances;
